@@ -1,4 +1,0 @@
-include examples/*.py
-include man/pycallgraph.1
-include COPYING
-
