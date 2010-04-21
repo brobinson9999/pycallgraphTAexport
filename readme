@@ -1,0 +1,8 @@
+pycallgraphTAexport
+-------------------
+
+  This work is licensed under the GPLv2.
+
+  pycallgraphTAexport is a fork of pycallgraph, a tool for extracting call graphs and performance information from Python programs. This fork has been extended with the capability to produce output in the TA (Tuple-Attribute) file format, for analysis with architecture extraction and visualization tools. In addition, the granularity at which the information is collected has been increased.
+
+  See usage-instructions for details on how to use pycallgraphTAexport.

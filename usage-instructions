@@ -1,0 +1,22 @@
+Usage Instructions for pycallgraphTAexport
+------------------------------------------
+
+pycallgraphTAexport is a modification of pycallgraph (http://pycallgraph.slowchop.com/) and can be used in the same way. We have not built the command-line support for pycallgraphTAexport but pycallgraphTAexport can still be used by importing the pycallgraphTAexport module and running the trace within your application.
+
+The following instructions are adapted from the instructions for pycallgraph 0.5.1 at http://pycallgraph.slowchop.com/pycallgraph/wiki/documentation/0.5.1:
+
+Just before your first line of code you want to graph, put in the following code:
+
+    import pycallgraphTAexport
+    pycallgraphTAexport.start_trace()
+
+To stop the trace and generate the graph, put in the following code (usually at the end of your program):
+
+    pycallgraphTAexport.make_TA_graph('test.ta')
+
+There is also a global variable in pycallgraphTAexport which defaults to zero and sets the minimum time any function must consume before it will be exported in the resulting TA file. This variable should be set before calling make_TA_graph:
+
+    pycallgraphTAexport.minimumTimeExportThreshold = 1
+    pycallgraphTAexport.make_TA_graph('example-1sec.ta')
+
+See also the included file usage-example.py for example usage.
